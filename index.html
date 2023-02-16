@@ -21,17 +21,20 @@
                       <name>Michael S. Lee</name>
 		    </p>
 		    <p>Hi, I am a 5th-year PhD student in the <a href="https://www.ri.cmu.edu/">Robotics Institute</a> at <a href="https://www.cmu.edu//">Carnegie Mellon University</a>, working at the intersection of <strong>explainable AI</strong> and <strong>human-robot interaction</strong>. I am fortunate to be advised by <a href="http://www.cs.cmu.edu/~reids/">Reid Simmons</a> and <a href="http://www.hennyadmoni.com/">Henny Admoni</a>, and am part of the <a href="http://harp.ri.cmu.edu/">Human and Robot Partners (HARP) Lab</a>.
-
 		    </p>
 		    <p>
-		      To collaborate and co-exist fluently with robots, humans must be able to understand their decision making. Thus, <strong>I research how a robot may intuitively summarize and convey its reward function (and subsequent policy) to a human using informative demonstrations</strong>.
+		      As AI and robots increasingly enter human society, it is paramount that their reward functions and subsequent behaviors are <em>transparent</em> (i.e. understandable and predictable) to humans. Thus, <strong>I research how robots may intuitively summarize and convey their underlying reward functions (and subsequent policies) to humans using informative demonstrations</strong>.
+
+		      <!-- To collaborate and co-exist fluently with robots, humans must be able to understand their decision making. Thus, <strong>I research how a robot may intuitively summarize and convey its reward function (and subsequent policy) to a human using informative demonstrations</strong>. -->
+
+
 		    </p>
 		    <p>
 		      I previously completed a Master's at Carnegie Mellon with <a href="https://www.ri.cmu.edu/ri-faculty/william-red-l-whittaker/">Red Whittaker</a> and <a href="https://www.ri.cmu.edu/ri-faculty/nathan-michael/">Nathan Michael</a> studying autonomous radiation source localization. And before that, I graduated from <a href="https://www.princeton.edu/">Princeton University</a> ('16) with degrees in Mechanical & Aerospace Engineering and a certificate in Robotics & Intelligent Systems. My undergraduate thesis on modeling uncertainty in stereo visual odometry was advised by <a href="https://www.ri.cmu.edu/ri-faculty/nathan-michael/">Nathan Michael</a> and <a href="https://www.linkedin.com/in/jianxiongxiao/">Jianxiong Xiao</a>.
 		    </p>
 
 		    <p>
-		      <b>I plan to transition into industry in Fall 2023, and am currently looking for opportunities related to my research interests (including but not limited to value/AI alignment, explainable AI, human-robot interaction, etc).</b>
+		      <b>I plan to transition into industry in Fall 2023, and am currently looking for opportunities related to my research interests (including but not limited to transparency, value/AI alignment, explainable AI, human-robot interaction).</b>
 		    </p>
 
 		    <p style="text-align:center">
@@ -58,17 +61,20 @@
 
 
 		    <p>
-		      Toward human understanding of robot decision making, my current research explores how a robot may teach its current reward function to a human learner using <strong>informative demonstrations</strong> (i.e. ones that <strong>exhibit key tradeoffs</strong>).
+		      Toward greater transparency (i.e. understandability and predictability) robot behaviors to humans, my current research explores how a robot may teach its underlying reward function to a human learner using <strong>informative demonstrations</strong> (i.e. ones that <strong>exhibit key tradeoffs in decision making</strong>).
+
+		      <!-- Toward human understanding of robot decision making, my current research explores how a robot may teach its current reward function to a human learner using <strong>informative demonstrations</strong> (i.e. ones that <strong>exhibit key tradeoffs</strong>). -->
 		    </p>
 		    <p>
-		      We calculate the informativeness of a demonstration and a maintain a model of a human's beliefs by assuming that humans employ a form of <strong>inverse reinforcement learning</strong>.
+		      Our first key insight is that a demonstration's informativeness to a human is not intrinsic, but is inherently tied to that human's prior beliefs and their current expectations of robot behavior. We thus rely on  <strong>inverse reinforcement learning</strong> and <strong>counterfactual reasoning</strong> (i.e. the extent to which the robot's demonstration differs from the human's current expectations) to evaluate a candidate demonstration's informativeness to a human at revealing the robot's reward function.
+		     <!-- We calculate the informativeness of a demonstration and a maintain a model of a human's beliefs by assuming that humans employ a form of <strong>inverse reinforcement learning</strong>. -->
 		    </p>
 		    <p>
-		      With the key insight that informativeness and difficulty of comprehension are often two sides of the same coin, we simultaneously leverage ideas from <strong>cognitive science</strong> (e.g. zone of proximal development) to ensure that the selected demonstrations present the right level of challenge.
+		      Our second key insight is that informativeness and difficulty of comprehension are often two sides of the same coin for humans, and we leverage ideas from cognitive science (e.g. <strong>zone of proximal development / "Goldilocks" principle</strong>) to ensure that the selected demonstrations present the <em>right level of challenge</em>. Too small of a difference and the reconciliation in the human's mind is trivial, and too large of a difference and the gap is irreconcilable in one shot; we use <em>scaffolding</em> to incrementally increase in information gain and simultaneously ease humans into learning.
 		    </p>
 
 		    <p>
-		      Finally, we are currently exploring how to select a suite of <b>informative tests</b> that reveal and bridge remaining gaps in the human learner's understanding, which can then be further supported through subsequent targeted demonstrations in a <b>closed-loop fashion</b>.
+		      Finally, we are currently exploring how to select a suite of <b>informative tests</b> (which query the human's ability to correctly predict robot behavior unseen scenarios) that reveal and bridge remaining gaps in the human learner's understanding, which can then be further supported through subsequent targeted demonstrations in a <b>closed-loop fashion</b>.
 		    </p>
 
 		  </td>
