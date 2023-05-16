@@ -1,1 +1,4 @@
 site/
+*Zone.Identifier
+Gemfile*
+*com.dropbox.attrs
